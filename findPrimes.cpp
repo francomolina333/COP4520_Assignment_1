@@ -71,7 +71,7 @@ int main()
     auto end = std::chrono::high_resolution_clock::now();
 
     // Calculate total execution time, number of primes found and sum of all primes
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start).count();
     int num_primes = primes.size();
     unsigned long int sum_primes = std::accumulate(primes.begin(), primes.end(), 0ll);
     int maxPrimes[10];
