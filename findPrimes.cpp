@@ -29,7 +29,7 @@ bool isPrime(int num)
 // Function to find primes within a range
 void findPrimes(int start, int end)
 {
-    for (int i = start; i <= end; i += 2)
+    for (int i = start; i <= end; i++)
     {
         if (isPrime(i))
         {
@@ -52,10 +52,8 @@ int main()
     // Divide the range into equal parts for each thread
     int interval = range / num_threads;
 
-    findPrimes(2, 2);
     // Create threads
-    std::vector<std::thread>
-        threads;
+    std::vector<std::thread> threads;
     for (int i = 0; i < num_threads; i++)
     {
         int start_range = i * interval + 1;
